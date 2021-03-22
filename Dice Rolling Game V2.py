@@ -36,7 +36,7 @@ def greater(bdict):
 
 def game(tuple_players):
     '''Players should be of class tuple'''
-    assert type(tuple_players) == tuple #
+    assert type(tuple_players) == tuple
     results = dice(tuple_players)
     a, b = greater(results)
     if len(a)==1:
@@ -44,7 +44,7 @@ def game(tuple_players):
         print(f"The winner is: {a}")
         return None
         
-    elif len(a)>1:
+    elif len(a) > 1:
         print(results)
         print(f"Players {a} have the same score {b}")
         final = {d:results[d] for d in tuple_players if d in a}
@@ -52,10 +52,10 @@ def game(tuple_players):
         return game(tuple(final))
 
 
-p = ("Froppy", "Uravity", "Duke", "Midnight",
+some_players = ("Froppy", "Uravity", "Duke", "Midnight",
      "Endeavor", "Nighteye", "Eraser_Head", "Tanjiro",
      "Nezuko", "Stain", "Invisible", "Nezu")
-game(p)
+game(some_players) 
             
 
 
